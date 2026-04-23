@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propiedades de Polímeros - Kit de Ingeniería</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Kit Demostrador de Polímeros</h1>
+        <p>Nanotecnología - Propiedades de los Materiales</p>
+    </header>
+
+    <div class="container">
+        <main class="grid" id="grid-materiales">
+            
+            <div class="card" onclick="abrirDetalle('Polietileno Tereftalato (PET)', 'img/monomeropet.jpg', 'Alta transparencia, buena barrera a gases y humedad. Reciclable.', ['Botellas de bebidas', 'Envases de alimentos', 'Fibras textiles (poliéster)'])">
+                <img src="img/pet.jpg" alt="Muestra de PET" class="card-img">
+                <div class="card-info">
+                    <h3>PET</h3>
+                    <p>Termoplástico transparente</p>
+                    <span class="tap-hint">Ver Detalles</span>
+                </div>
+            </div>
+
+             <div class="card" onclick="abrirDetalle('Polietileno Tereftalato (PET)', 'img/PET.jpg', 'Alta transparencia, buena barrera a gases y humedad. Reciclable.', ['Botellas de bebidas', 'Envases de alimentos', 'Fibras textiles (poliéster)'])">
+                <img src="img/HDPE.webp" alt="Muestra de PET" class="card-img">
+                <div class="card-info">
+                    <h3>HDPE</h3>
+                    <p>Termoplástico transparente</p>
+                    <span class="tap-hint">Ver Detalles</span>
+                </div>
+            </div>
+
+             <div class="card" onclick="abrirDetalle('Polietileno Tereftalato (PET)', 'img/PET.jpg', 'Alta transparencia, buena barrera a gases y humedad. Reciclable.', ['Botellas de bebidas', 'Envases de alimentos', 'Fibras textiles (poliéster)'])">
+                <img src="img/PVC.png" alt="Muestra de PET" class="card-img">
+                <div class="card-info">
+                    <h3>PVC</h3>
+                    <p>Termoplástico transparente</p>
+                    <span class="tap-hint">Ver Detalles</span>
+                </div>
+            </div>
+
+             <div class="card" onclick="abrirDetalle('Polietileno Tereftalato (PET)', 'img/PET.jpg', 'Alta transparencia, buena barrera a gases y humedad. Reciclable.', ['Botellas de bebidas', 'Envases de alimentos', 'Fibras textiles (poliéster)'])">
+                <img src="img/LDPE.jpg" alt="Muestra de PET" class="card-img">
+                <div class="card-info">
+                    <h3>LDPE</h3>
+                    <p>Termoplástico transparente</p>
+                    <span class="tap-hint">Ver Detalles</span>
+                </div>
+            </div>
+
+             <div class="card" onclick="abrirDetalle('Polietileno Tereftalato (PET)', 'img/PET.jpg', 'El polipropileno es un polímero termoplástico semicristalino de la familia de las poliolefinas, obtenido mediante la polimerización del monómero propileno (un gas derivado del petróleo y gas natural). En términos químicos, el PP es un hidrocarburo lineal (fórmula repetitiva CnH2n) muy similar al polietileno pero con un grupo metilo (–CH3) unido a la cadena principal de cada unidad. Esta simple diferencia en su estructura molecular le confiere propiedades únicas frente a otros termoplásticos. .', ['Botellas de bebidas', 'Envases de alimentos', 'Fibras textiles (poliéster)'])">
+                <img src="img/PP.jpg" alt="Muestra de PET" class="card-img">
+                <div class="card-info">
+                    <h3>PP</h3>
+                    <p>Termoplástico transparente</p>
+                    <span class="tap-hint">Ver Detalles</span>
+                </div>
+            </div>
+
+             <div class="card" onclick="abrirDetalle('Polietileno Tereftalato (PET)', 'img/PET.jpg', 'Alta transparencia, buena barrera a gases y humedad. Reciclable.', ['Botellas de bebidas', 'Envases de alimentos', 'Fibras textiles (poliéster)'])">
+                <img src="img/PS.webp" alt="Muestra de PET" class="card-img">
+                <div class="card-info">
+                    <h3>PS</h3>
+                    <p>Termoplástico transparente</p>
+                    <span class="tap-hint">Ver Detalles</span>
+                </div>
+            </div>
+
+             <div class="card" onclick="abrirDetalle('Polietileno Tereftalato (PET)', 'img/PET.jpg', 'Alta transparencia, buena barrera a gases y humedad. Reciclable.', ['Botellas de bebidas', 'Envases de alimentos', 'Fibras textiles (poliéster)'])">
+                <img src="img/pet.jpg" alt="Muestra de PET" class="card-img">
+                <div class="card-info">
+                    <h3>NYlON</h3>
+                    <p>Termoplástico transparente</p>
+                    <span class="tap-hint">Ver Detalles</span>
+                </div>
+            </div>
+
+            <div class="card" onclick="abrirDetalle('Nitinol (NiTi)', 'img/nitinol_detalle.jpg', 'Aleación con memoria de forma y superelasticidad.', ['Stents médicos', 'Monturas de gafas', 'Actuadores en robótica'])">
+                <img src="img/nitinol.jpg" alt="Muestra de Nitinol" class="card-img">
+                <div class="card-info">
+                    <h3>Acrilico</h3>
+                    <p>Memoria de Forma</p>
+                    <span class="tap-hint">Ver Detalles</span>
+                </div>
+            </div>
+
+            </main>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="cerrarModal()">&times;</span>
+            
+            <img id="modal-imagen" src="" alt="Imagen del Material" class="modal-img-grande">
+            
+            <div class="modal-text">
+                <h2 id="modal-titulo"></h2>
+                
+                <div class="modal-seccion">
+                    <h4>Propiedades Clave:</h4>
+                    <p id="modal-descripcion"></p>
+                </div>
+
+                <div class="modal-seccion">
+                    <h4>Aplicaciones Comunes:</h4>
+                    <ul id="modal-aplicaciones">
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+/* --- Base y Reset --- */
+:root {
+    --primary-color: #2c3e50;
+    --accent-color: #3498db;
+    --bg-color: #f4f7f6;
+    --card-bg: #ffffff;
+    --text-color: #333;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* --- Header --- */
+header {
+    background: var(--primary-color);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 { margin: 0; font-size: 1.8rem; }
+header p { margin: 5px 0 0; opacity: 0.8; font-size: 1rem; }
+
+/* --- Contenedor Principal y Grid --- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.grid {
+    display: grid;
+    /* Responsive: 1 columna en móvil, se adapta en escritorio */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* --- Tarjetas (Cards) --- */
+.card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden; /* Para que la imagen respete los bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+    cursor: pointer;
+    
+    /* Transición suave para el efecto al presionar */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    
+    /* Para asegurar que todo el contenido sea clickeable */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Imagen de la Tarjeta */
+.card-img {
+    width: 100%;
+    height: 180px; /* Altura fija para que todas sean iguales */
+    object-fit: cover; /* Recorta la imagen para que llene el espacio sin deformarse */
+}
+
+/* Información dentro de la Tarjeta */
+.card-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.card-info h3 { margin: 0; color: var(--primary-color); font-size: 1.3rem; }
+.card-info p { margin: 5px 0; color: #7f8c8d; font-size: 0.9rem; }
+
+/* Indicador visual "Toca para ver más" */
+.tap-hint {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s;
+}
+
+/* --- EFECTO AL PRESIONAR (Móvil y Escritorio) --- */
+.card:hover .tap-hint {
+    border-color: var(--accent-color);
+}
+
+.card:active {
+    transform: translateY(3px) scale(0.98); /* Efecto de hundimiento */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra más tenue */
+}
+
+/* --- Modal (Ventana Emergente) Mejorado --- */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px); /* Efecto de fondo borroso */
+}
+
+.modal-content {
+    background-color: white;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    
+    /* --- ESTO ARREGLA EL PROBLEMA --- */
+    max-height: 90vh; /* No permite que el modal sea más alto que el 90% de la pantalla */
+    display: flex;
+    flex-direction: column; /* Organiza la imagen y el texto en columna */
+}
+
+.modal-text {
+    padding: 20px;
+    /* --- ESTO PERMITE EL SCROLL INTERNO --- */
+    overflow-y: auto; 
+    flex-grow: 1; /* Hace que esta parte use el espacio disponible */
+}
+
+/* Opcional: Que la imagen no ocupe demasiado espacio en móviles para dejar ver el texto */
+@media (max-height: 600px) {
+    .modal-img-grande {
+        height: 150px;
+    }
+}
+
+@keyframes modalEntrada {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Botón de Cerrar (X) */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1010;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+/* Imagen grande en el Modal */
+.modal-img-grande {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Texto dentro del Modal */
+.modal-text {
+    padding: 20px;
+}
+
+.modal-text h2 {
+    margin-top: 0;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 10px;
+}
+
+.modal-seccion {
+    margin-bottom: 15px;
+}
+
+.modal-seccion h4 { margin: 0 0 5px; color: #555; }
+.modal-seccion p, .modal-seccion ul { margin: 0; font-size: 0.95rem; }
+.modal-seccion ul { padding-left: 20px; }
+
+.modal-text::-webkit-scrollbar {
+    width: 6px;
+}
+.modal-text::-webkit-scrollbar-thumb {
+    background: #bdc3c7;
+    border-radius: 10px;
+}
