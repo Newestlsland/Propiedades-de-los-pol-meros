@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propiedades de Polímeros - Kit de Ingeniería</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   <header>
+    <div class="header-container">
+        <div class="logo-placeholder left">
+            <img src="img/logos/logo_ujat.png" alt="Logo Universidad" class="logo-img">
+        </div>
+
+        <div class="header-text">
+            <h1>Kit Demostrador de Polímeros</h1>
+            <p>Nanotecnología - Propiedades de los Materiales</p>
+        </div>
+
+        <div class="logo-placeholder right">
+            <img src="img/logos/logo_nano.png" alt="Logo Carrera" class="logo-img">
+        </div>
+    </div>
+</header>
+<section class="info-block">
+    <h2>¿Cómo se clasifican los polímeros?</h2>
+    <div class="flex-info">
+        <div class="info-item">
+            <span class="icon">🔥</span>
+            <h4>Termoplásticos</h4>
+            <p>
+                Compuestos por cadenas lineales o ramificadas unidas por fuerzas intermoleculares débiles. 
+        Su principal ventaja es la <strong>reprocesabilidad</strong>: pueden fundirse y reformarse múltiples veces 
+        al superar su Temperatura de Transición Vítrea (Tg) o su Punto de Fusión (Tm). 
+        En el kit verás ejemplos desde amorfos transparentes hasta semicristalinos de alta opacidad.
+
+            </p>
+        </div>
+       <div class="info-item">
+    <span class="icon">❄️</span>
+    <h4>Termoestables</h4>
+    <p>
+        Sufren un proceso de <strong>reticulación</strong> durante el curado, formando enlaces covalentes 
+        intercatenarios permanentes. Esto crea una red tridimensional rígida que les otorga una estabilidad 
+        térmica superior y nula capacidad de flujo. No son reciclables por fusión, pero son esenciales en 
+        aplicaciones de alta resistencia mecánica y térmica.
+    </p>
+</div>
+
+<div class="info-item">
+    <span class="icon">🎈</span>
+    <h4>Elastómeros</h4>
+    <p>
+        Polímeros con enlaces cruzados escasos que permiten una movilidad de cadena excepcional. Su comportamiento 
+        está regido por la <strong>elasticidad entrópica</strong>, permitiendo deformaciones masivas y una 
+        recuperación instantánea. Poseen una $T_g$ muy baja, manteniéndose en un estado gomoso a temperatura ambiente.
+    </p>
+</div>
+    </div>
+</section>
+    <div class="container">
+        <main class="grid" id="grid-materiales">
+            
+            <div class="card" onclick="abrirDetalle('PET (Polietileno Tereftalato)', 'https://http2.mlstatic.com/D_NQ_NP_766301-MLM31237841206_062019-O.webp', 'Es un polímero higroscópico que requiere secado riguroso antes de procesarse. En nanotecnología, se usan nanocompuestos de arcilla para mejorar su barrera contra gases.', ['Envases de alta presión', 'Fibras textiles (poliéster)', 'Películas radiográficas'])">
+    <img src="img/pet.jpg" alt="PET" class="card-img">
+    <div class="card-info">
+        <h3>PET</h3>
+        <p>Barrera Molecular</p>
+        <span class="tap-hint">Ver Datos Curiosos</span>
+    </div>
+</div>
+
+<div class="card" onclick="abrirDetalle('HDPE (Polietileno de Alta Densidad)', 'https://www.plasticosduarte.es/wp-content/uploads/hdpe_color_polietileno_plasticos_duarte.jpg', 'Su estructura lineal le otorga una alta cristalinidad. Es fascinante porque, a pesar de ser un plástico industrial fuerte, su densidad es menor a la del agua (0.95 g/cm³), por lo que flota.', ['Tuberías para químicos', 'Envases de detergentes', 'Prótesis articulares'])">
+    <img src="img/HDPE.webp" alt="HDPE" class="card-img">
+    <div class="card-info">
+        <h3>HDPE</h3>
+        <p>Resistencia Química</p>
+        <span class="tap-hint">Ver Datos Curiosos</span>
+    </div>
+</div>
+
+<div class="card" onclick="abrirDetalle('PVC (Policloruro de Vinilo)', 'https://d1vpmfwd72pjy6.cloudfront.net/uploads/product/24b2f51a65f6.jpeg', 'Es el camaleón de los polímeros. Por naturaleza es rígido y autoextinguible (no propaga el fuego) gracias a su 57% de contenido de cloro en peso.', ['Tuberías de construcción', 'Recubrimiento de cables', 'Cueros sintéticos'])">
+    <img src="img/PVC.png" alt="PVC" class="card-img">
+    <div class="card-info">
+        <h3>PVC</h3>
+        <p>Versatilidad y Fuego</p>
+        <span class="tap-hint">Ver Datos Curiosos</span>
+    </div>
+</div>
+
+<div class="card" onclick="abrirDetalle('LDPE (Polietileno de Baja Densidad)', 'https://tse2.mm.bing.net/th/id/OIP.Sj6FJpkTm_qABMWsW_jXcAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3', 'Sus cadenas moleculares altamente ramificadas impiden el empaquetamiento, resultando en un material extremadamente flexible que puede estirarse hasta un 500% sin romperse.', ['Bolsas de supermercado', 'Film transparente', 'Aislamiento de cables'])">
+    <img src="img/LDPE.jpg" alt="LDPE" class="card-img">
+    <div class="card-info">
+        <h3>LDPE</h3>
+        <p>Máxima Flexibilidad</p>
+        <span class="tap-hint">Ver Datos Curiosos</span>
+    </div>
+</div>
+
+<div class="card" onclick="abrirDetalle('PP (Polipropileno)', 'https://th.bing.com/th/id/R.6d96600673db479f629de387b34f8fe1?rik=J1lEoLc4FA1csw&pid=ImgRaw&r=0', 'Es el rey de la resistencia a la fatiga. Se usa en bisagras integradas que pueden doblarse millones de veces. Es el plástico de menor densidad y aguanta hasta 160°C.', ['Tapas de botellas', 'Componentes de autos', 'Equipos médicos esterilizables'])">
+    <img src="img/pp.jpg" alt="PP" class="card-img">
+    <div class="card-info">
+        <h3>PP</h3>
+        <p>Resistencia a la Fatiga</p>
+        <span class="tap-hint">Ver Datos Curiosos</span>
+    </div>
+</div>
+
+<div class="card" onclick="abrirDetalle('PS (Poliestireno)', 'img/ps.jpg', 'En nanotecnología, sus microesferas calibradas son vitales para validar microscopios. Como aislante, en su forma expandida, el 98% de su volumen es simplemente aire.', ['Aislamiento térmico', 'Carcasas de electrodomésticos', 'Material de laboratorio'])">
+    <img src="img/PS.webp" alt="PS" class="card-img">
+    <div class="card-info">
+        <h3>PS</h3>
+        <p>Aislante Atómico</p>
+        <span class="tap-hint">Ver Datos Curiosos</span>
+    </div>
+</div>
+
+<div class="card" onclick="abrirDetalle('OTHER (Otros Polímeros)', 'img/other.jpg', 'Esta categoría incluye plásticos técnicos como el ABS o el Nylon. En nanotecnología, representa la frontera de los nuevos materiales reforzados con grafeno o biopolímeros avanzados.', ['Piezas de ingeniería (LEGO)', 'Componentes aeroespaciales', 'Impresión 3D de alta precisión'])">
+    <img src="https://contenedoresdereciclaje.com/wp-content/uploads/2025/09/Plasticos-7-Guia-Completa-para-Reciclar-1024x768.webp" alt="Otros Plásticos" class="card-img">
+    <div class="card-info">
+        <h3>OTHER</h3>
+        <p>Ingeniería Avanzada</p>
+        <span class="tap-hint">Ver Datos Curiosos</span>
+    </div>
+</div>
+<div class="card" onclick="abrirDetalle('PMMA (Acrílico)', 'img/pmma.jpg', 'Es más transparente que el vidrio más puro y altamente biocompatible. Se usa como cemento óseo en cirugías humanas y en fibras ópticas plásticas para nanosensores.', ['Prótesis óseas', 'Fibras ópticas plásticas', 'Ventanas de acuarios'])">
+    <img src="https://tse4.mm.bing.net/th/id/OIP.U4aKl47x_rdNZyeTlE0YswHaDo?rs=1&pid=ImgDetMain&o=7&rm=3" alt="PMMA" class="card-img">
+    <div class="card-info">
+        <h3>PMMA</h3>
+        <p>Claridad Óptica</p>
+        <span class="tap-hint">Ver Datos Curiosos</span>
+    </div>
+</div>
+
+<div class="card" onclick="abrirDetalle('PUR (Poliuretano)', 'img/pur.jpg', 'Es un polímero extremadamente versátil que puede ser una espuma flexible o un sólido rígido. Posee una estructura celular que lo convierte en el mejor aislante térmico industrial.', ['Aislamiento de refrigeradores', 'Calzado deportivo', 'Dispositivos médicos biocompatibles'])">
+    <img src="https://polisantafe.com.ar/wp-content/uploads/que-significa-pur-poliuretano-1.webp" alt="Poliuretano" class="card-img">
+    <div class="card-info">
+        <h3>PUR</h3>
+        <p>Aislamiento y Versatilidad</p>
+        <span class="tap-hint">Ver Datos Curiosos</span>
+    </div>
+</div>
+
+            </main>
+
+            <section class="table-section">
+    <h2>Matriz Comparativa de Propiedades</h2>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Material</th>
+                    <th>Densidad (g/cm³)</th>
+                    <th>Temp. Máx (°C)</th>
+                    <th>Propiedad de Ingeniería</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>1</td><td><strong>PET</strong></td><td>1.38</td><td>70</td><td>Barrera a gases y claridad</td></tr>
+                <tr><td>2</td><td><strong>HDPE</strong></td><td>0.95</td><td>120</td><td>Resistencia química extrema</td></tr>
+                <tr><td>3</td><td><strong>PVC</strong></td><td>1.40</td><td>60</td><td>Autoextinguible y versátil</td></tr>
+                <tr><td>4</td><td><strong>LDPE</strong></td><td>0.92</td><td>80</td><td>Tenacidad y flexibilidad</td></tr>
+                <tr><td>5</td><td><strong>PP</strong></td><td>0.90</td><td>145</td><td>Resistencia a la fatiga cíclica</td></tr>
+                <tr><td>6</td><td><strong>PS</strong></td><td>1.05</td><td>75</td><td>Aislamiento y rigidez</td></tr>
+                <tr><td>7</td><td><strong>PUR</strong></td><td>Variable</td><td>100</td><td>Capacidad de amortiguación</td></tr>
+                <tr><td>8</td><td><strong>OTHER (ABS/Nylon)</strong></td><td>1.04 - 1.14</td><td>100+</td><td>Resistencia al impacto (Ingeniería)</td></tr>
+                <tr><td>9</td><td><strong>PMMA</strong></td><td>1.18</td><td>90</td><td>Transmisión de luz superior al vidrio</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <p class="table-note">*Los valores de densidad y temperatura son promedios industriales para materiales sin aditivos.</p>
+</section>
+
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="cerrarModal()">&times;</span>
+            
+            <img id="modal-imagen" src="" alt="Imagen del Material" class="modal-img-grande">
+            
+            <div class="modal-text">
+                <h2 id="modal-titulo"></h2>
+                
+                <div class="modal-seccion">
+                    <h4>Propiedades Clave:</h4>
+                    <p id="modal-descripcion"></p>
+                </div>
+
+                <div class="modal-seccion">
+                    <h4>Aplicaciones Comunes:</h4>
+                    <ul id="modal-aplicaciones">
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <footer class="nano-future">
+    <h3>El Futuro: Nanopolímeros</h3>
+    <p>La nanotecnología permite reforzar estos materiales con <strong>grafeno</strong> o <strong>nanotubos de carbono</strong>, creando plásticos más ligeros que el aluminio y más fuertes que el acero.</p>
+    <div class="nano-tags">
+        <span>#Nanocompuestos</span> <span>#AutoReparación</span> <span>#Sustentabilidad</span>
+    </div>
+</footer>
+
+
+</body>
+</html>
